@@ -84,6 +84,33 @@ public String addCart(@RequestParam Integer id, @RequestParam Integer cantidad, 
 	
 	return "/usuario/carrito";
 }
-
+//quitar producto del carrito
+@GetMapping("/delete/cart/{id}")
+public String deletePrdouctoCart(@PathVariable Integer id, Model model) {
+	
+	
+	//lista nueva de productos
+	List<DetalleOrden> ordenesNueva=new ArrayList<DetalleOrden>();
+	
+	for (DetalleOrden detalleOrden: detalles) {
+		if(detalleOrden.getProducto().getId()!=id) {
+			ordenesNueva.add(detalleOrden);
+			
+		}
+	}
+	//poner la nueva lista con los productos restantes
+	detalles=ordenesNueva;
+	
+	double sumaTotal=0;
+	
+sumaTotal=detalles.stream().mapToDouble(dt->dt.getTotal()).sum();//lambda para obtener totales
+	
+	orden.setTotal(sumaTotal);
+	
+	model.addAttribute("cart", detalles);
+	model.addAttribute("orden", orden);
+	
+	return "usuario/carrito";
+}
 
 }
