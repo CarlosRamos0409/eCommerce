@@ -1,5 +1,7 @@
 package com.sistema.ecommerce.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,4 +19,20 @@ public class OrdenServiceImpl implements IOrdenService {
 		return ordenRepository.save(orden);
 	}
 
+	@Override
+	public List<Orden> findAll() {
+		
+		return ordenRepository.findAll();
+	}
+
+	public String generarNumeroOrden() {
+		int numero=0;
+		
+		String numeroConcatenado="";
+		
+		List <Orden> ordenes= findAll();
+		
+		
+		return "numeroConcatenado";
+	}
 }
