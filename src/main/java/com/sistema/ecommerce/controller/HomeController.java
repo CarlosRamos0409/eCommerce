@@ -20,7 +20,7 @@ import com.sistema.ecommerce.model.Orden;
 import com.sistema.ecommerce.model.Producto;
 import com.sistema.ecommerce.model.Usuario;
 import com.sistema.ecommerce.service.IUsuarioService;
-import com.sistema.ecommerce.service.ProductoService;
+import com.sistema.ecommerce.service.IProductoService;
 
 @Controller
 @RequestMapping("/")
@@ -29,7 +29,7 @@ public class HomeController {
 	
 	
 	@Autowired
-	private ProductoService productoService;
+	private IProductoService productoService;
 	
 	@Autowired
 	private IUsuarioService usuarioService;

@@ -16,7 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.sistema.ecommerce.model.Producto;
 import com.sistema.ecommerce.model.Usuario;
-import com.sistema.ecommerce.service.ProductoService;
+import com.sistema.ecommerce.service.IProductoService;
 import com.sistema.ecommerce.service.UploadFileService;
 
 @Controller
@@ -26,7 +26,7 @@ public class ProductoController {
 	private final Logger LOGGER = LoggerFactory.getLogger(ProductoController.class);
 
 	@Autowired
-	private ProductoService productoService;
+	private IProductoService productoService;
 
 	@Autowired
 	private UploadFileService upload;
