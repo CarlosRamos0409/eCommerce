@@ -7,8 +7,8 @@ import com.sistema.ecommerce.model.DetalleOrden;
 import com.sistema.ecommerce.repository.IDetalleOrdenRepository;
 
 @Service
-public class DetalleOrdenServiceImpl implements IDetalleOrdenService{
-	
+public class DetalleOrdenServiceImpl implements IDetalleOrdenService {
+
 	@Autowired
 	private IDetalleOrdenRepository detalleOrdenRepository;
 
@@ -16,5 +16,4 @@ public class DetalleOrdenServiceImpl implements IDetalleOrdenService{
 	public DetalleOrden save(DetalleOrden detalleOrden) {
 		return detalleOrdenRepository.save(detalleOrden);
 	}
-
 }
