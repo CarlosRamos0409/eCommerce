@@ -193,4 +193,6 @@ public String serachProduct(@RequestParam String nombre, Model model) {
 	return"/usuario/home";
 }
 
+
+
 }
