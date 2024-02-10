@@ -39,7 +39,7 @@ public class UsuarioController {
 	@PostMapping("/save")
 	public String save(Usuario usuario) {
 		logger.info("Usuario registro: {}", usuario);
-		//usuario.setTipo("USER");
+		usuario.setTipo("USER");
 		//usuario.setPassword( passEncode.encode(usuario.getPassword()));
 		usuarioService.save(usuario);		
 		return "redirect:/";
