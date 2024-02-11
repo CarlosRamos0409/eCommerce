@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.sistema.ecommerce.model.Orden;
+import com.sistema.ecommerce.model.Usuario;
 
 
 public interface IOrdenService {
@@ -11,5 +12,5 @@ public interface IOrdenService {
 	Optional<Orden> findById(Integer id);
 	Orden save (Orden orden);
 	String generarNumeroOrden();
-	
+	List<Orden> findByUsuario(Usuario usuario);
 }
