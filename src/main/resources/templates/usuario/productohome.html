@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Spring eCommerce</title>
+<title>My eCommerce</title>
 
 
 <!-- Bootstrap core CSS -->
@@ -32,7 +32,7 @@
 
 		<!-- Page Heading/Breadcrumbs -->
 		<h1 class="mt-4 mb-3">
-			Spring eCommerce <small>Producto</small>
+			My eCommerce <small>Producto</small>
 		</h1>
 
 		<ol class="breadcrumb">
@@ -52,7 +52,8 @@
 					<div class="col-lg-6">
 						
 						<form th:action="@{/cart}" method="POST">
-						<input type="hidden" th:value="${producto.id}" name="id">//etiqueta oculta que trae el id del producto
+							<!-- etiqueta oculta que trae el id del producto -->
+						<input type="hidden" th:value="${producto.id}" name="id">
 							<h2 class="card-title" th:text="${producto.nombre}"></h2>
 
 							<ul class="list-group">
